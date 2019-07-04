@@ -19,47 +19,46 @@ import static org.junit.Assert.*;
  * @author Me
  */
 public class TestInserUsuario {
-    
+
     private final String PERSISTENCE_UNIT_NAME = "eventAppWS";
     EntityManager eManager;
-    
-    
+
     @Test
-    public void insertUsuario(){
-        
+    public void insertUsuario() {
+
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         assertNotNull(emf);
         System.out.println("emf Creado");
         eManager = emf.createEntityManager();
         assertNotNull(eManager);
         System.out.println("em creado");
-        
+
         eManager.getTransaction().begin();
-        
-        /*Persona persona = new Persona();
-        persona.setNombre("Carlo");
-        persona.setApellidoP("Mango");
-        persona.setApellidoM("Mangazo");
+
+        Persona persona = new Persona();
+        persona.setNombre("Bryan");
+        persona.setApellidoP("Gongora");
+        persona.setApellidoM("Martinez");
         persona.setFechaNac(new Date());
-        persona.setGenero('H');*/
+        persona.setFechaRegistro(new Date());
+        persona.setGenero('H');
         
-        Persona persona = eManager.find(Persona.class, 1);
-        
-        //eManager.persist(persona);
-        
-        Usuario usuario = new Usuario();
-        usuario.setIdPersona(persona.getIdPersona());
-        usuario.setContrasenya("Und3rground");
-        usuario.setCorreo("omg_@live.com.mx");
-        usuario.setDescripcion("Soy una persona para compartir viajes con compañeros nuevos");
-        usuario.setNickname("BGongora");
-        
-        eManager.persist(usuario);
-        eManager.getTransaction().commit();
-        
-        
-        
-        
+        //Persona persona = eManager.find(Persona.class, 1);
+        assertNotNull(persona);
+
+        eManager.persist(persona);
+        if (persona != null) {
+            System.out.println("Si entré");
+            Usuario usuario = new Usuario();
+            usuario.setIdPersona(persona.getIdPersona());
+            usuario.setContrasenya("Und3rground");
+            usuario.setCorreo("carlo_mango@live.com.mx");
+            usuario.setDescripcion("Soy una persona para compartir viajes con compañeros nuevos");
+
+            eManager.persist(usuario);
+            eManager.getTransaction().commit();
+        }
+
     }
-    
+
 }

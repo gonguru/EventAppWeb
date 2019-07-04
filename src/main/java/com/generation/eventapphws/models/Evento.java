@@ -30,6 +30,7 @@ public class Evento {
     private Date fechaEvento;
     
     private String descripcion;
+    private String imagenUrl;
     private short activo = 1;
     private Date fechaRegistro;
     private int idUsuario;
@@ -66,6 +67,14 @@ public class Evento {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+    
+    public void setImagenUrl(String imagenUrl){
+        this.imagenUrl = imagenUrl;
+    }
+    
+    public String getImagenUrl(){
+        return imagenUrl;
     }
 
     public short getActivo() {

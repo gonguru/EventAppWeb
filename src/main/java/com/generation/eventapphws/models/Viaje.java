@@ -28,11 +28,14 @@ public class Viaje {
     private short maximoAs;
     private Date fechaViaje;
     private Date fechaDead;
+    private String descripcion;
+    private float precio;
     private Date fechaRegistro;
     private short activo = 1;
     private int idDestino;
     private int idPartida;
     private int idEvento;
+    private int idUsuario;
     
     public Viaje(){}
 
@@ -63,6 +66,31 @@ public class Viaje {
     public Date getFechaViaje() {
         return fechaViaje;
     }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+    
 
     public void setFechaViaje(Date fechaViaje) {
         this.fechaViaje = fechaViaje;

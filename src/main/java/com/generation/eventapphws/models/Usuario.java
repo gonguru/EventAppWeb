@@ -23,7 +23,6 @@ public class Usuario{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int idUsuario;
-    private String nickname;
     private String correo;
     private String contrasenya;
     private short calificacion;
@@ -39,14 +38,6 @@ public class Usuario{
 
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
     }
 
     public String getCorreo() {

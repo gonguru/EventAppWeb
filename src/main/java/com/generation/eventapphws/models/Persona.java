@@ -29,6 +29,8 @@ public class Persona {
     private String apellidoM;
     private Date fechaNac;
     private char genero;
+    private short activo = 1;
+    private Date fechaRegistro;
     
     public Persona(){}
 
@@ -70,6 +72,22 @@ public class Persona {
 
     public void setFechaNac(Date fechaNac) {
         this.fechaNac = fechaNac;
+    }
+    
+    public void setActivo(short activo){
+        this.activo = activo;
+    }
+    
+    public short getActivo(){
+        return activo;
+    }
+    
+    public void setFechaRegistro(Date fechaRegistro){
+        this.fechaRegistro = fechaRegistro;
+    }
+    
+    public Date getFechaRegistro(){
+        return fechaRegistro;
     }
 
     public char getGenero() {
