@@ -23,7 +23,7 @@ public class TestInserUsuario {
     private final String PERSISTENCE_UNIT_NAME = "eventAppWS";
     EntityManager eManager;
 
-    @Test
+    //@Test
     public void insertUsuario() {
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
@@ -36,8 +36,8 @@ public class TestInserUsuario {
         eManager.getTransaction().begin();
 
         Persona persona = new Persona();
-        persona.setNombre("Bryan");
-        persona.setApellidoP("Gongora");
+        persona.setNombre("Febro");
+        persona.setApellidoP("Hipolito");
         persona.setApellidoM("Martinez");
         persona.setFechaNac(new Date());
         persona.setFechaRegistro(new Date());
@@ -51,8 +51,8 @@ public class TestInserUsuario {
             System.out.println("Si entré");
             Usuario usuario = new Usuario();
             usuario.setIdPersona(persona.getIdPersona());
-            usuario.setContrasenya("Und3rground");
-            usuario.setCorreo("carlo_mango@live.com.mx");
+            usuario.setContrasenya("Febronio");
+            usuario.setCorreo("febro@live.com.mx");
             usuario.setDescripcion("Soy una persona para compartir viajes con compañeros nuevos");
 
             eManager.persist(usuario);

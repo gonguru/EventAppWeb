@@ -5,13 +5,16 @@
  */
 package com.generation.eventapphws.services;
 
+import com.generation.eventapphws.models.Respuesta;
 import com.generation.eventapphws.models.Usuario;
 import com.google.gson.Gson;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -27,25 +30,18 @@ public class UsuarioWs {
     public static final String PERSISTENCE_UNIT_NAME = "eventAppWS";
     EntityManager eManager;
   
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response loginUsuario(String json){
-        
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-        eManager = emf.createEntityManager();
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response validarUsuario(String json){
         
         Gson gson = new Gson();
-        Usuario user;
+        Usuario user = gson.fromJson(json, Usuario.class);
+        Respuesta res;
         
-        user = gson.fromJson(json, Usuario.class);
-        System.out.println(user);
-        
-        
-        
-        
-        
-        
-        return Response.ok().entity(user).build();
+        Query query = eManager.createQuery("SELECT u FROM Usuario u WHERE u.correo=:correo AND contrasenya=:contraseña");
+        Usuario u = (Usuario) query.setParameter("correo", user.getCorreo()).setParameter("contraseña", user.getContrasenya()).getSingleResult();
+        res = new Respuesta("True", 1);
+        return Response.ok().entity(res).build();
     }
 }
