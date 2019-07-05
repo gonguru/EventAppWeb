@@ -14,7 +14,7 @@ public class Respuesta {
     private int codigo;
     private String mensaje;
     
-    public Respuesta(String mensaje,int codigo){
+    public Respuesta(int codigo,String mensaje){
         this.mensaje = mensaje;
         this.codigo = codigo;
     }
