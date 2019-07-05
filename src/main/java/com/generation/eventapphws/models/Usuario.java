@@ -87,7 +87,9 @@ public class Usuario{
     public void setIdPersona(int idPersona) {
         this.idPersona = idPersona;
     }
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "{\"correo\":\"" + correo + "\",\"contraseña\":" + contrasenya + "\"}";
+    }
 }
