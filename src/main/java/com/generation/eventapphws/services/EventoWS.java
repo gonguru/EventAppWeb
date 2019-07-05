@@ -37,5 +37,6 @@ public class EventoWS {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response agregarEstados(String json){
         Gson gson = new Gson();
+        return null;
     }
 }

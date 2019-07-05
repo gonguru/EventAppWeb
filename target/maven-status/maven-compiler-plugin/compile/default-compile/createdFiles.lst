@@ -1,7 +1,7 @@
-com/generation/eventapphws/models/Destino.class
 com/generation/eventapphws/services/ApplicationConfig.class
-com/generation/eventapphws/models/Usuario.class
 com/generation/eventapphws/models/Evento.class
+com/generation/eventapphws/models/Destino.class
+com/generation/eventapphws/models/Usuario.class
 com/generation/eventapphws/models/Interes.class
 com/generation/eventapphws/models/Partida.class
 com/generation/eventapphws/models/Viaje.class
