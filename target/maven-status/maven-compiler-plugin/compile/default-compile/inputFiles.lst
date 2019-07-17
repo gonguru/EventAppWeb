@@ -1,12 +1,15 @@
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/services/ApplicationConfig.java
-/Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Viaje.java
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/EventManager.java
+/Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/services/CorsFilter.java
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/services/UsuarioWs.java
+/Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/ObjetoRegistro.java
+/Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Destino.java
+/Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Perfil.java
+/Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Viaje.java
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Persona.java
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Partida.java
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Evento.java
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Interes.java
-/Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Destino.java
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Respuesta.java
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/models/Usuario.java
 /Users/Me/NetBeansProjects/EventAppHWS/src/main/java/com/generation/eventapphws/services/EventoWS.java

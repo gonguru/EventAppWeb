@@ -1,8 +1,11 @@
 com/generation/eventapphws/services/EventoWS.class
 com/generation/eventapphws/services/ApplicationConfig.class
+com/generation/eventapphws/services/CorsFilter.class
 com/generation/eventapphws/models/Evento.class
 com/generation/eventapphws/models/Destino.class
 com/generation/eventapphws/models/Usuario.class
+com/generation/eventapphws/models/Perfil.class
+com/generation/eventapphws/models/ObjetoRegistro.class
 com/generation/eventapphws/models/Respuesta.class
 com/generation/eventapphws/models/Interes.class
 com/generation/eventapphws/services/UsuarioWs.class

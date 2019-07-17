@@ -14,7 +14,7 @@ public class TestLoginUsuario {
     private final String PERSISTENCE_UNIT_NAME = "eventAppWS";
     EntityManager eManager;
 
-    @Test
+    //@Test
     public void loginUsuario() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         assertNotNull(emf);

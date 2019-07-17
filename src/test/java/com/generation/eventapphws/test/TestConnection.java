@@ -23,7 +23,7 @@ public class TestConnection {
     EntityManager entityManager;
     
     
-    @Test
+    //@Test
     public void pruebaConnection(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         assertNotNull(emf);
